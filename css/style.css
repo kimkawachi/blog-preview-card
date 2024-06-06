@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Set core body defaults */
+body {
+
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ 
+ :root {
+    /* Colors */ 
+    --primary: hsl(47, 88%, 63%);
+    --neutral:hsl(0, 0%, 100%);
+    --neutral-light:hsl(0, 0%, 50%);
+    --neutral-dark:hsl(0, 0%, 7%);
+    /* font-weight */
+    --fw-light: 500;
+    --fw-heavy: 800;
+ }
+
+ body {
+  background-color: var(--primary); 
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+.card {
+    border: 1px solid var(--neutral-dark);
+    background-color: var(--neutral);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    max-width: 24rem;
+    /* margin-bottom: 10rem; */
+    padding: 1.5rem;
+    box-shadow: 5px 5px var(--neutral-dark);
+}
+
+.svg {
+    border-radius: 1rem;
+}
+
+.button {
+    margin-top: 1.5rem;
+}
+
+.primary-button {
+    background-color: var(--primary);
+    border: none;
+    border-radius: .3rem;
+    padding: .4rem .8rem;
+    font-family: "Figtree", sans-serif;
+    font-size: .9rem;
+    font-weight: var(--fw-heavy);
+    color: var(--neutral-dark);
+}
+
+.published {
+    font-weight: var(--fw-light);
+    color: var(--neutral-dark);
+}
+
+.title {
+    font-weight: var(--fw-heavy);
+}
+
+.card-content {
+    color: var(--neutral-light);
+    font-weight: var(--fw-light);
+}
+
+
+
+.author {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    
+    gap: .6rem;
+    
+    /* border: 2px solid red; */
+}
+
+.blog-avatar {
+    width: 30px;
+    
+    /* border: 2px solid red; */
+}
+
+.name {
+    margin: 0;
+    font-size: .9rem;
+    font-weight: var(--fw-heavy);
+}
+
+footer {
+    margin-bottom: 10px;
+}
+
+
