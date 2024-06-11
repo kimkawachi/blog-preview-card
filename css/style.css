@@ -73,7 +73,7 @@ body {
 }
 
 .card {
-  max-width: 384px;
+  max-width: 24rem;
   margin: auto;
   border: 1px solid var(--neutral-dark);
   background-color: var(--neutral);
