@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
+:root {
+  /* Colors */ 
+  --primary: hsl(47, 88%, 63%);
+  --neutral:hsl(0, 0%, 100%);
+  --neutral-light:#494949;
+  --neutral-dark:hsl(0, 0%, 7%);
+
+  /* fonts */
+  --fs-large:1.5rem;
+  --fs-regular:1rem;
+  --fs-small:.9rem;
+
+  --fw-light: 500;
+  --fw-heavy: 800;
+}
 
 /* Box sizing rules */
 *,
@@ -26,6 +41,7 @@ body {
 
   min-height: 100vh;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -40,12 +56,6 @@ h3, h4 {
   text-wrap: balance;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
 /* Make images easier to work with */
 img,
 picture {
@@ -53,106 +63,121 @@ picture {
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
-  font-family: inherit;
-  font-size: inherit;
-}
-
- 
- :root {
-    /* Colors */ 
-    --primary: hsl(47, 88%, 63%);
-    --neutral:hsl(0, 0%, 100%);
-    --neutral-light:hsl(0, 0%, 50%);
-    --neutral-dark:hsl(0, 0%, 7%);
-    /* font-weight */
-    --fw-light: 500;
-    --fw-heavy: 800;
- }
-
- body {
+body {
   background-color: var(--primary); 
   font-family: "Figtree", sans-serif;
-  font-size: 16px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
- }
+}
 
 .card {
-    border: 1px solid var(--neutral-dark);
-    background-color: var(--neutral);
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    max-width: 24rem;
-    /* margin-bottom: 10rem; */
-    padding: 1.5rem;
-    box-shadow: 5px 5px var(--neutral-dark);
+  max-width: 384px;
+  margin: auto;
+  border: 1px solid var(--neutral-dark);
+  background-color: var(--neutral);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  box-shadow: .5rem .5rem var(--neutral-dark);
+  transition: box-shadow 300ms ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 1rem 1rem var(--neutral-dark);
 }
 
 .svg {
-    border-radius: 1rem;
+  border-radius: .5rem;
 }
 
-.button {
-    margin-top: 1.5rem;
-}
-
-.primary-button {
-    background-color: var(--primary);
-    border: none;
-    border-radius: .3rem;
-    padding: .4rem .8rem;
-    font-family: "Figtree", sans-serif;
-    font-size: .9rem;
-    font-weight: var(--fw-heavy);
-    color: var(--neutral-dark);
+.category-label {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: var(--primary);
+  border-radius: .3rem;
+  padding: .3rem .7rem;
+  font-family: "Figtree", sans-serif;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-heavy);
+  color: var(--neutral-dark);
 }
 
 .published {
-    font-weight: var(--fw-light);
-    color: var(--neutral-dark);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-light);
+  color: var(--neutral-dark);
+  margin-bottom: .5rem;
+}
+
+a {
+  text-decoration: none;
+  justify-content: center;
+  padding-block: .5rem;
+}
+
+a:focus {
+  outline: var(--primary) 2px solid;
+  border-radius: .3rem;  
 }
 
 .title {
-    font-weight: var(--fw-heavy);
+  margin-top: 0;
+  font-size: var(--fs-large);
+  font-weight: var(--fw-heavy);   
+  color: var(--neutral-dark);
+  transition: color 300ms ease-in-out;
+}
+
+.title:hover {
+  color: var(--primary);
 }
 
 .card-content {
-    color: var(--neutral-light);
-    font-weight: var(--fw-light);
+  margin-block: 0.5rem;
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-light);
+  color: var(--neutral-light);
 }
 
-
-
 .author {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    
-    gap: .6rem;
-    
-    /* border: 2px solid red; */
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem; 
 }
 
 .blog-avatar {
-    width: 30px;
-    
-    /* border: 2px solid red; */
+  width: 30px;
+      
 }
 
 .name {
-    margin: 0;
-    font-size: .9rem;
-    font-weight: var(--fw-heavy);
+  margin: 0;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-heavy);
 }
 
-footer {
-    margin-bottom: 10px;
+@media (max-width:400px) {
+ :root {
+  --fs-large: 1.25rem;
+  --fs-regular:.9rem;
+  --fs-small:.8rem;
+} 
+
+.card {
+  padding: 1rem;
 }
 
+}
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
 
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}
