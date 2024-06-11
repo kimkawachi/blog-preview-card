@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/kimkawachi/blog-preview-card](https://your-solution-url.com)
-- Live Site URL: [https://kimkawachi.github.io/blog-preview-card/](https://your-live-site-url.com)
+- Solution URL: [your solution URL here](https://github.com/kimkawachi/blog-preview-card)
+- Live Site URL: [your live sit URL here](https://kimkawachi.github.io/blog-preview-card/)
 
 ## My process
 
